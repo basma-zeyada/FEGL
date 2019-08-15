@@ -1,0 +1,75 @@
+body{
+  height: 100vh;
+}
+
+input[type='checkbox'] {display:none;}
+input[type='checkbox'] + label:before {
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block;
+  font-size: 1rem;
+  color: #10074f;
+}
+/* unchecked */
+input[type='checkbox'] + label:before { 
+  content: "\f096";
+  font-weight:100;
+}
+/* checked */
+input[type='checkbox']:checked + label:before {
+  font-weight:900;
+  content: '\f046';
+  color: #bbb;
+}
+
+input[type='checkbox']:checked + label {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.jumbotron{
+  background: url(../img/intro.png) 0 0 fixed no-repeat;
+  background-size: cover;
+}
+
+.download-file{
+  background-color: #f7f7f7;
+  box-shadow: 0px -40px 40px 0px #0b0f259e;
+}
+
+.principles{
+  background: url(../img/bk.png) 0 0 fixed no-repeat;
+  background-size: cover;
+}
+
+.card{
+  background-color: #f7f7f7;
+}
+
+.card-header .btn{
+  font-size: 1.3rem;
+}
+
+.form-check {
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+a.toggle_hint {
+  font-size: .8rem;
+  color: #797979 !important;
+  cursor: pointer;
+}
+
+.hint{
+  display: none;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.hint > div {
+  padding: 10px;
+}
+
+.hint ul{
+  padding-left: 20px;
+}
