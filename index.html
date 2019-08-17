@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <title>Front-End Guidelines</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <meta property="og:title" content="Front-End Guidelines" />
+    <meta property="og:description" content="Front-End Coding Standards (HTML & CSS)" />
+    <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
+    <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+
+    
     <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/index.css">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    
   </head>
 
   <body>
+
+      <nav class="navbar fixed-top navbar-light bg-light">
+          <a class="navbar-brand" href="#">Fixed top</a>
+        </nav>
     <div class="jumbotron h-100 text-light mb-0">
       <div class="container-fluid d-flex h-100">
         <div class="row align-self-center">
@@ -42,228 +50,254 @@
       <div class="container">
         <h1 class="text-center text-light font-weight-light my-5">The Front-End Checklist</h1>
         <br>
-        <form>
-          <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header p-0" id="headingOne">
-                <h1 class="mb-0">
-                  <button class="btn btn-link font-weight-bold" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    HTML
-                  </button>
-                </h1>
+        <form id="form_data" class="needs-validation" onsubmit="getFormData()">
+          <div class="card mb-4">
+            <div class="card-header font-weight-bold p-2 text-dark">
+                General information
               </div>
-          
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html1">
-                      <label class="form-check-label" for="html1">
-                          File Naming and Organization 
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>Filenames should contain lowercase letters and words should be separated with a hyphen. The hyphen word separator (as opposed to an underscore or camelcase) is considered good practice for SEO reasons.</div>
-                      </div>
+            <div class="card-body">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Project name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="proj_name" data_name="Project Name" placeholder="Project name" required>
+                  <div class="invalid-tooltip">
+                      Please provide a valid city.
                     </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html2">
-                      <label class="form-check-label" for="html2">
-                          Semantics 
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>HTML5 provides us with lots of semantic elements aimed to describe precisely the content - take advantage of its rich vocabulary.</div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html3">
-                      <label class="form-check-label" for="html3">
-                          Formatting 
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>
-                          <ul>
-                            <li>Attribute values, even numeric attributes, should be quoted, Always use double quotes, never single quotes</li>
-                            <li>DO NOT include a trailing slash in self-closing elements - the HTML5 spec defines this as optional. These self-closing elements include:
-                              <code>
-                                &lthr&gt
-                                &ltbr&gt
-                                &ltinput&gt
-                                &ltimg&gt
-                              </code>  
-                            </li>
-                            <li>Element and attribute names should all be lowercase.</li>
-                            <li>Classes are preferred over IDs when it comes to CSS references to avoid specificity issues.</li>
-                            <li>All HTML code must be valid and well formed. A validator can often help a developer track down styling or scripting bugs.
-                              <br>
-                              Tools such as The <a href="https://validator.w3.org/">W3C Markup Validation Service</a> or <a href="https://www.powermapper.com/products/sortsite/">PowerMapper’s SortSite</a> can be used to test code validation as well as other aspects of development.
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html4">
-                      <label class="form-check-label" for="html4">
-                          HTML5 DOCTYPE <code><small> <i>&lt!DOCTYPE html&gt</i> </small></code>
-                      </label>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html5">
-                      <label class="form-check-label" for="html5">
-                          Language and Character Encoding <code><small><i> &lthtml lang="en-us"&gt</i> <i> &ltmeta charset="UTF-8"&gt</i></small></code>
-                      </label>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html6">
-                      <label class="form-check-label" for="html6">
-                        CSS and JavaScript Includes
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>Per the HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.</div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html7">
-                      <label class="form-check-label" for="html7">
-                        Attribute Order
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>HTML attributes should come in this particular order for easier reading of code.
-                          <code>
-                            <ul>
-                              <li>src, for, type, href, value</li>
-                              <li>class</li>
-                              <li>id, name</li>
-                              <li>title, alt</li>
-                              <li>role, aria-*</li>
-                              <li>data-*</li>
-                            </ul>
-                          </code>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html8">
-                      <label class="form-check-label" for="html8">
-                        Boolean Attributes
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>XHTML required you to declare a value for all attributes, but HTML5 has no such requirement for boolean attributes. 
-                          <code>"autofocus, selected, checked, disabled, readonly, multiple, required, novalidate"</code>
-                          <br> The <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#sec-boolean-attributes">W3C Spec for Boolean Attributes</a> has additional information on these boolean attributes.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html9">
-                      <label class="form-check-label" for="html9">
-                        JavaScript-Generated Markup
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible. </div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html10">
-                      <label class="form-check-label" for="html10">
-                        Comments
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>Insert an ending comment after the closing tag of a long HTML section. This helps to identify what named element is being closed. <b>DO NOT</b> use a starting comment.
-                        <br>
-                        <code>
-                            &ltdiv class="my-class"&gt<br>
-                                ...<br>
-                                &lt/div&gt<br>
-                            &lt!-- /.my-class --&gt
-                        </code>
-                    </div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html11">
-                      <label class="form-check-label" for="html11">
-                        Accessibility (a11y)
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>
-                          <ul>
-                            <li>Use <code>H1 - H6 </code>to properly order and identify headings.</li>
-                            <li>In tables, use the <code>scope</code> attribute to associate header cells and data cells in data tables and use the <code>summary</code> attribute of the table element to give an overview of data tables.</li>
-                            <li>For forms, always provide a submit button, use <code>label</code> elements to associate text labels with form controls, and visually indicate required form controls.</li>
-                            <li>With image elements, always use <code>alt</code> attributes. it attribute text should describe the content of the image as specifically as possible. 
-                              <ul>
-                                <li>If an image is used for decorative purposes only, an <code>alt="" </code>should be used.</li>
-                              </ul>
-                            </li>
-                            <li>Inline <code>svg</code> elements should include <code>title</code> and, as needed, <code>desc</code> elements to provide alternative titles and descriptions.
-                              <ul>
-                                <li>The <code>title</code> element must be the first child of it's parent element. This provides a human readable name for the SVG content.</li>
-                                <li>A <code>desc</code> element may be added to describe the SVG. Consider adding <code>desc</code> elements to describe complex SVGs such as charts or process maps.</li>
-                                <li>If an SVG image is purely decorative, do not include a title or description. Decorative SVG elements should be identified as presentational by adding the ARIA attributes <code>aria-hidden="true"</code> and <code>role="presentation"</code>.</li>
-                              </ul>
-                            </li>
-                          </ul>
-                          For additional information on writing good alt attribute text, check out <a href="https://moz.com/learn/seo/alt-text">What is Alt Text (Alternative Text)?</a> by Moz.
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="html12">
-                      <label class="form-check-label" for="html12">
-                          Performance
-                      </label>
-                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
-                      <div class="bg-white rounded text-secondary hint">
-                        <div>don't block the rendering of your page by placing them in the <code>&lthead&gt</code>. Move as many as possible to the bottom of the markup right above the <code>&lt/body&gt</code> or <code>async/defer</code> the load.
-                          <br>
-                          Individual SVG assets should be optimized using a tool such as <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a>. Image assets should be processed using a tool like <a href="https://imageoptim.com/mac">ImageOptim</a>.
-                        </div>
-                      </div>
-                    </div>
-
                 </div>
               </div>
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Developer name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="dev_name" data_name="Developer Name" placeholder="Developer name" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-sm-3 col-form-label">Date</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control-plaintext" id="form_date" readonly>
+                  </div>
+                </div>
+            </div>
+          </div>
+            <div class="card mb-3">
+          
+                <div class="card-header font-weight-bold p-2 text-dark">
+                  HTML
+                  </div>
+                <div class="card-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" data_name="File Naming and Organization" value="" id="html1">
+                    <label class="form-check-label" for="html1">
+                        File Naming and Organization 
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>Filenames should contain lowercase letters and words should be separated with a hyphen. The hyphen word separator (as opposed to an underscore or camelcase) is considered good practice for SEO reasons.</div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Semantics" id="html2">
+                    <label class="form-check-label" for="html2">
+                        Semantics 
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>HTML5 provides us with lots of semantic elements aimed to describe precisely the content - take advantage of its rich vocabulary.</div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Formatting" id="html3">
+                    <label class="form-check-label" for="html3">
+                        Formatting 
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>
+                        <ul>
+                          <li>Attribute values, even numeric attributes, should be quoted, Always use double quotes, never single quotes</li>
+                          <li>DO NOT include a trailing slash in self-closing elements - the HTML5 spec defines this as optional. These self-closing elements include:
+                            <code>
+                              &lthr&gt
+                              &ltbr&gt
+                              &ltinput&gt
+                              &ltimg&gt
+                            </code>  
+                          </li>
+                          <li>Element and attribute names should all be lowercase.</li>
+                          <li>Classes are preferred over IDs when it comes to CSS references to avoid specificity issues.</li>
+                          <li>All HTML code must be valid and well formed. A validator can often help a developer track down styling or scripting bugs.
+                            <br>
+                            Tools such as The <a href="https://validator.w3.org/">W3C Markup Validation Service</a> or <a href="https://www.powermapper.com/products/sortsite/">PowerMapper’s SortSite</a> can be used to test code validation as well as other aspects of development.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="HTML5 DOCTYPE" id="html4">
+                    <label class="form-check-label" for="html4">
+                        HTML5 DOCTYPE <code><small> <i>&lt!DOCTYPE html&gt</i> </small></code>
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Language and Character Encoding" id="html5">
+                    <label class="form-check-label" for="html5">
+                        Language and Character Encoding <code><small><i> &lthtml lang="en-us"&gt</i> <i> &ltmeta charset="UTF-8"&gt</i></small></code>
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="CSS and javascript Includes" id="html6">
+                    <label class="form-check-label" for="html6">
+                      CSS and JavaScript Includes
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>Per the HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as text/css and text/javascript are their respective defaults.</div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Attribute Order" id="html7">
+                    <label class="form-check-label" for="html7">
+                      Attribute Order
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>HTML attributes should come in this particular order for easier reading of code.
+                        <code>
+                          <ul>
+                            <li>src, for, type, href, value</li>
+                            <li>class</li>
+                            <li>id, name</li>
+                            <li>title, alt</li>
+                            <li>role, aria-*</li>
+                            <li>data-*</li>
+                          </ul>
+                        </code>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Boolean Attributes" id="html8">
+                    <label class="form-check-label" for="html8">
+                      Boolean Attributes
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>XHTML required you to declare a value for all attributes, but HTML5 has no such requirement for boolean attributes. 
+                        <code>"autofocus, selected, checked, disabled, readonly, multiple, required, novalidate"</code>
+                        <br> The <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#sec-boolean-attributes">W3C Spec for Boolean Attributes</a> has additional information on these boolean attributes.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="JavaScript-Generated Markup" id="html9">
+                    <label class="form-check-label" for="html9">
+                      JavaScript-Generated Markup
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible. </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Comments" id="html10">
+                    <label class="form-check-label" for="html10">
+                      Comments
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>Insert an ending comment after the closing tag of a long HTML section. This helps to identify what named element is being closed. <b>DO NOT</b> use a starting comment.
+                      <br>
+                      <code>
+                          &ltdiv class="my-class"&gt<br>
+                              ...<br>
+                              &lt/div&gt<br>
+                          &lt!-- /.my-class --&gt
+                      </code>
+                  </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Accessibility (a11y)" id="html11">
+                    <label class="form-check-label" for="html11">
+                      Accessibility (a11y)
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>
+                        <ul>
+                          <li>Use <code>H1 - H6 </code>to properly order and identify headings.</li>
+                          <li>In tables, use the <code>scope</code> attribute to associate header cells and data cells in data tables and use the <code>summary</code> attribute of the table element to give an overview of data tables.</li>
+                          <li>For forms, always provide a submit button, use <code>label</code> elements to associate text labels with form controls, and visually indicate required form controls.</li>
+                          <li>With image elements, always use <code>alt</code> attributes. it attribute text should describe the content of the image as specifically as possible. 
+                            <ul>
+                              <li>If an image is used for decorative purposes only, an <code>alt="" </code>should be used.</li>
+                            </ul>
+                          </li>
+                          <li>Inline <code>svg</code> elements should include <code>title</code> and, as needed, <code>desc</code> elements to provide alternative titles and descriptions.
+                            <ul>
+                              <li>The <code>title</code> element must be the first child of it's parent element. This provides a human readable name for the SVG content.</li>
+                              <li>A <code>desc</code> element may be added to describe the SVG. Consider adding <code>desc</code> elements to describe complex SVGs such as charts or process maps.</li>
+                              <li>If an SVG image is purely decorative, do not include a title or description. Decorative SVG elements should be identified as presentational by adding the ARIA attributes <code>aria-hidden="true"</code> and <code>role="presentation"</code>.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                        For additional information on writing good alt attribute text, check out <a href="https://moz.com/learn/seo/alt-text">What is Alt Text (Alternative Text)?</a> by Moz.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" data_name="Performance" id="html12">
+                    <label class="form-check-label" for="html12">
+                        Performance
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>don't block the rendering of your page by placing them in the <code>&lthead&gt</code>. Move as many as possible to the bottom of the markup right above the <code>&lt/body&gt</code> or <code>async/defer</code> the load.
+                        <br>
+                        Individual SVG assets should be optimized using a tool such as <a href="https://jakearchibald.github.io/svgomg/">SVGOMG</a>. Image assets should be processed using a tool like <a href="https://imageoptim.com/mac">ImageOptim</a>.
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group form-check">
+                    <label for="othercomments" class="font-weight-bold">Other comments</label>
+                    <textarea class="form-control" id="othercomments" data_name="Other Comments" rows="2"></textarea>
+                  </div>
+                </div>
             </div>
             <div class="card">
-              <div class="card-header p-0" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Collapsible Group Item #2
-                  </button>
-                </h2>
+              <div class="card-header  font-weight-bold p-2 text-dark">CSS/SCSS
               </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
                   Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                 </div>
-              </div>
             </div>
+          <div class="form-group text-center mt-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
           
       </div>
         
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/html2pdf.bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 
 </html>
