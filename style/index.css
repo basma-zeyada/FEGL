@@ -2,6 +2,10 @@ body{
   height: 100vh;
 }
 
+.bg-blue {
+  background-color: #160f4e;
+}
+
 input[type='checkbox'] {display:none;}
 input[type='checkbox'] + label:before {
   font: normal normal normal 14px/1 FontAwesome;
