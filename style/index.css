@@ -1,3 +1,5 @@
+
+
 body{
   height: 100vh;
 }
@@ -5,6 +7,8 @@ body{
 .bg-blue {
   background-color: #160f4e;
 }
+
+/*** checkbox icon start ***/
 
 input[type='checkbox'] {display:none;}
 input[type='checkbox'] + label:before {
@@ -15,7 +19,7 @@ input[type='checkbox'] + label:before {
 }
 /* unchecked */
 input[type='checkbox'] + label:before { 
-  content: "\f096";
+  content: '\f096';
   font-weight:100;
 }
 /* checked */
@@ -30,6 +34,8 @@ input[type='checkbox']:checked + label {
   color: #bbb;
 }
 
+/*** checkbox icon end ***/
+
 .jumbotron{
   background: url(../img/intro.png) 0 0 fixed no-repeat;
   background-size: cover;
@@ -39,6 +45,21 @@ input[type='checkbox']:checked + label {
   background-color: #fbfbfb;
   box-shadow: 0px -40px 40px 0px #0b0f259e;
 }
+
+
+/*** animated navbar start ***/
+
+.navbar{
+  box-shadow: 0px 0px 40px 0px #0b0f259e;
+  transition: ease-in-out all 0.3s;
+}
+.anim_nav{
+  opacity: 0;
+  top:-20px;
+}
+/*** animated navbar end ***/
+
+/*** checklist start ***/
 
 .principles{
   background: url(../img/bk.png) 0 0 fixed no-repeat;
@@ -51,6 +72,14 @@ input[type='checkbox']:checked + label {
 
 .card-header .btn{
   font-size: 1.3rem;
+}
+
+.card-header .btn .fa::before{
+  content: '\f077';
+}
+
+.card-header .btn.collapsed .fa::before{
+  content: '\f078';
 }
 
 .form-check {
@@ -78,10 +107,4 @@ a.toggle_hint {
   padding-left: 20px;
 }
 
-.card-header .btn .fa::before{
-  content: "\f077";
-}
-
-.card-header .btn.collapsed .fa::before{
-  content: "\f078";
-}
+/*** checklist end ***/

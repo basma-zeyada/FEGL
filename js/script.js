@@ -5,7 +5,12 @@ $(function(){
     var top = $(this).scrollTop();
     $(".jumbotron").css("background-position-y",(top/-5));
     // $(".principles").css("background-position-y",(top/-5));
-    
+    debugger
+    if( top >= 300){
+      $(".navbar").removeClass("anim_nav")
+    }else{
+      $(".navbar").addClass("anim_nav")
+    }
   })
   $(".start").on("click",function(e) {
     e.preventDefault();

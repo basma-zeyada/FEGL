@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Front-End Guidelines</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
 
     <meta property="og:title" content="Front-End Guidelines" />
     <meta property="og:description" content="Front-End Coding Standards (HTML & CSS)" />
@@ -20,8 +20,8 @@
 
   <body>
 
-    <nav class="navbar fixed-top  text-light bg-blue py-3">
-      <h3 class="w-100 text-center">Front-End Coding Standards (HTML &amp; CSS)</h3>
+    <nav class="navbar fixed-top text-light bg-blue py-3 anim_nav">
+      <h4 class="w-100 text-center">Front-End Coding Standards (HTML &amp; CSS)</h4>
     </nav>
     <div class="jumbotron h-100 text-light mb-0">
       <div class="container-fluid d-flex h-100">
@@ -31,7 +31,8 @@
               <p class="lead">This is a living document of Best Practices and Code Standards for Front-End Development. The UI Development Team is encouraged to test, discuss, and evolve what is documented here together as best practices change and new ideas are shared.</p>
               <hr class="my-4">
               <p>Please implement and enforce these agreed upon standards in your own builds and in code reviews at all times for all projects.</p>
-              <a class="btn btn-primary btn-lg start" href="#" role="button">Let's get started</a>
+              <a class="btn btn-primary  start" href="#" role="button">Let's get started</a>
+              <a href="https://github.com/badran1/eSpace-Front-End-Guidlines" target="_blank" class="btn btn-outline-light">Full documentation <i class="fa fa-external-link"></i></a>
             </div>
         </div>
       </div>
@@ -281,7 +282,76 @@
               <div class="card-header  font-weight-bold p-2 text-dark">CSS/SCSS
               </div>
                 <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" data_name="File Naming and Organization" value="" id="css1">
+                    <label class="form-check-label" for="css1">
+                        File Naming and Organization 
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>Filenames should contain lowercase letters and words should be separated with a hyphen. 
+                        <ul>
+                          <li>Within individual CSS/SCSS files, organize sections of code by component element.</li>
+                          <li>Maintain a consistent commenting hierarchy for each section of code.</li>
+                          <li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
+                          <li>The top-level SCSS should serve as a “Table of Contents” 
+                            <ul>
+                              <li>Global
+                                  <li>Vendor</li>
+                                  <li>Elements</li>
+                                  <li>Components</li>
+                                  <li>Sections</li>
+                                  <li>Pages</li>
+                            </ul>
+                            <li>Partials are named <i>_partial-name.scss</i> - with a "_" prefix - to indicate that this file isn't meant to be compiled by itself.</li>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="css2">
+                      <label class="form-check-label" for="css2">
+                          Rule Structure 
+                      </label>
+                      <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                      <div class="bg-white rounded text-secondary hint">
+                        <div>
+                          <ul>
+                            <li>Extends and Includes
+                              <ul>
+                                <li>Always place @extend and @include statements on the first lines of a declaration block.</li>
+                              </ul>
+                            </li>
+                            <li>To support a mobile-first cascade, the styles that are defined first represent the "base" or smallest screen look. Media Queries are added after our Regular Styles to build on or modify the "base" look.</li>
+                            <li>Pseudo Class’ and Pseudo Elements directly relate to the element itself so we nest them first before other selectors.</li>
+                            <li>Differentiate between Pseudo Elements and Pseudo Classes by using a double colon versus a single colon, respectively <code>(my-class::before { … } versus my-class:hover { … })</code>.</li>
+                            
+                                <li>When grouping selectors, keep each selector to a single line.</li>
+                                <li>Include one space before the opening brace of declaration blocks for legibility.</li>
+                                <li>Place closing braces of declaration blocks on a new line.</li>
+                                <li>Include one space after the <code>:</code> for each declaration.</li>
+                                <li>Each declaration should appear on its own line for more accurate error reporting.</li>
+                                <li>End all declarations with a semicolon. The last declarations semicolon is optional, but your code is more error prone without it.</li>
+                                <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
+                                <li>Don't include spaces after commas within <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
+                                <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
+                                <li>If you need transparency, use <code>rgba()</code>. Otherwise, always use the hexadecimal format.</li>
+                                <li>Lowercase all hex values (e.g., <code>#fff</code>). Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
+                                <li>Use shorthand hex values where available (e.g., <code>#fff</code> instead of <code>#ffffff</code>).</li>
+                                <li>Use single quotes consistently (e.g., <code>content: '';</code>).</li>
+                                <li>Quote attribute values in selectors (e.g., <code>input[type='text']</code>). They’re only optional in some cases, and it’s a good practice for consistency.</li>
+                                <li>Avoid specifying units for zero values (e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>).</li>
+                                <li>Separate each ruleset by a blank line.</li>
+                                <li>Don't make values and selectors hard to override. Minimize the use of id's and avoid <code>!important</code>.</li>
+                                <li>For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.</li>
+                                
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
           <div class="form-group text-center mt-3">
