@@ -328,30 +328,90 @@
                             <li>To support a mobile-first cascade, the styles that are defined first represent the "base" or smallest screen look. Media Queries are added after our Regular Styles to build on or modify the "base" look.</li>
                             <li>Pseudo Class’ and Pseudo Elements directly relate to the element itself so we nest them first before other selectors.</li>
                             <li>Differentiate between Pseudo Elements and Pseudo Classes by using a double colon versus a single colon, respectively <code>(my-class::before { … } versus my-class:hover { … })</code>.</li>
-                            
-                                <li>When grouping selectors, keep each selector to a single line.</li>
-                                <li>Include one space before the opening brace of declaration blocks for legibility.</li>
-                                <li>Place closing braces of declaration blocks on a new line.</li>
-                                <li>Include one space after the <code>:</code> for each declaration.</li>
-                                <li>Each declaration should appear on its own line for more accurate error reporting.</li>
-                                <li>End all declarations with a semicolon. The last declarations semicolon is optional, but your code is more error prone without it.</li>
-                                <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
-                                <li>Don't include spaces after commas within <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
-                                <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
-                                <li>If you need transparency, use <code>rgba()</code>. Otherwise, always use the hexadecimal format.</li>
-                                <li>Lowercase all hex values (e.g., <code>#fff</code>). Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
-                                <li>Use shorthand hex values where available (e.g., <code>#fff</code> instead of <code>#ffffff</code>).</li>
-                                <li>Use single quotes consistently (e.g., <code>content: '';</code>).</li>
-                                <li>Quote attribute values in selectors (e.g., <code>input[type='text']</code>). They’re only optional in some cases, and it’s a good practice for consistency.</li>
-                                <li>Avoid specifying units for zero values (e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>).</li>
-                                <li>Separate each ruleset by a blank line.</li>
-                                <li>Don't make values and selectors hard to override. Minimize the use of id's and avoid <code>!important</code>.</li>
-                                <li>For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.</li>
-                                
+                              <li>When grouping selectors, keep each selector to a single line.</li>
+                              <li>Include one space before the opening brace of declaration blocks for legibility.</li>
+                              <li>Place closing braces of declaration blocks on a new line.</li>
+                              <li>Include one space after the <code>:</code> for each declaration.</li>
+                              <li>Each declaration should appear on its own line for more accurate error reporting.</li>
+                              <li>End all declarations with a semicolon. The last declarations semicolon is optional, but your code is more error prone without it.</li>
+                              <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
+                              <li>Don't include spaces after commas within <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
+                              <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
+                              <li>If you need transparency, use <code>rgba()</code>. Otherwise, always use the hexadecimal format.</li>
+                              <li>Lowercase all hex values (e.g., <code>#fff</code>). Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
+                              <li>Use shorthand hex values where available (e.g., <code>#fff</code> instead of <code>#ffffff</code>).</li>
+                              <li>Use single quotes consistently (e.g., <code>content: '';</code>).</li>
+                              <li>Quote attribute values in selectors (e.g., <code>input[type='text']</code>). They’re only optional in some cases, and it’s a good practice for consistency.</li>
+                              <li>Avoid specifying units for zero values (e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>).</li>
+                              <li>Separate each ruleset by a blank line.</li>
+                              <li>Don't make values and selectors hard to override. Minimize the use of id's and avoid <code>!important</code>.</li>
+                              <li>For improved readability, wrap all math operations in parentheses with a single space between values, variables, and operators.</li>
                           </ul>
                         </div>
                       </div>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="css2">
+                    <label class="form-check-label" for="css2">
+                      Property Declaration Order
+                    </label>
+                    <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
+                    <div class="bg-white rounded text-secondary hint">
+                      <div>
+                          Related property declarations should be grouped together following the below general order:
+                          <div class="row m-4">
+                            <ul class="col-sm-4">
+                              <li>Box Sizing</li>
+                              <li>Position</li>
+                              <li>Display</li>
+                              <li>Flex</li>
+                              <li>Grid</li>
+                              <li>Order</li>
+                              <li>Columns</li>
+                              <li>Float</li>
+                              <li>Margin</li>
+                              <li>Outline</li>
+                              <li>Box Shadow</li>
+                              <li>Border Radius</li>
+                              <li>Border</li>
+                            </ul>
+                            <ul class="col-sm-4">
+                              <li>Border Style</li>
+                              <li>Border Color</li>
+                              <li>Border Image</li>
+                              <li>Padding</li>
+                              <li>Width</li>
+                              <li>Height</li>
+                              <li>Overflow</li>
+                              <li>Background</li>
+                              <li>Cursor and Events</li>
+                              <li>svg</li>
+                              <li>List Style</li>
+                              <li>Counters</li>
+                              <li>Tables</li>
+                            </ul>
+                            <ul class="col-sm-4">
+                              <li>Visibility</li>
+                              <li>Vertical Alignment</li>
+                              <li>Text Alignment and Decoration</li>
+                              <li>Text Spacing</li>
+                              <li>Font</li>
+                              <li>Color</li>
+                              <li>Animation</li>
+                              <li>Transform</li>
+                              <li>Transition</li>
+                              <li>Content</li>
+                              <li>Breaks</li>
+                              <li>Misc</li>
+                            </ul>
+                        </div>
+                        Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.
+                        <br>
+                        Everything else takes place inside the component or without impacting the previous two sections, and thus they come last.
+                      </div>
                     </div>
+                  </div>
                 </div>
             </div>
           <div class="form-group text-center mt-3">

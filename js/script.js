@@ -5,7 +5,6 @@ $(function(){
     var top = $(this).scrollTop();
     $(".jumbotron").css("background-position-y",(top/-5));
     // $(".principles").css("background-position-y",(top/-5));
-    debugger
     if( top >= 300){
       $(".navbar").removeClass("anim_nav")
     }else{
@@ -36,11 +35,17 @@ function getDate(){
   return [day,month,year];
 }
 function getFormData(){
-  var dev_name = document.getElementById('dev_name').value;
-  var element = document.getElementById('form_data');
-  var opt = {
-    margin:       10,
-    filename:     dev_name,
-  };
-  html2pdf(element, opt);
+  $("#form_data").addClass("form_print")
+  
+    var dev_name = document.getElementById('dev_name').value;
+    var element = document.getElementById('form_data');
+    var opt = {
+      margin:       10,
+      filename:     dev_name,
+    };
+    html2pdf(element, opt);
+  
+  setTimeout(function(){
+    $("#form_data").removeClass("form_print")
+  },1000)
 }

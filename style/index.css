@@ -108,3 +108,10 @@ a.toggle_hint {
 }
 
 /*** checklist end ***/
+
+
+/*** form Print start ***/
+
+.form_print .hint, .form_print .toggle_hint, .form_print button[type="submit"]{
+  visibility: hidden;
+}
