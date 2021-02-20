@@ -2,7 +2,7 @@
   "name": "Front-End Guidelines",
   "short_name": "FE Guidelines",
   "start_url": ".",
-  "scope": ".",
+  "scope": "https://basma-zeyada.github.io/FEGL/",
   "display": "standalone",
   "background_color": "#fff",
   "description": "A readable Hacker News app.",
