@@ -3,11 +3,11 @@
   "short_name": "FE Guidelines",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#000",
+  "background_color": "#fff",
   "description": "A readable Hacker News app.",
   "icons": [{
-    "src": "img/logo-icon-48.png",
-    "sizes": "48x48",
+    "src": "img/logo-icon-44.png",
+    "sizes": "44x44",
     "type": "image/png"
   },
   {
@@ -17,7 +17,7 @@
   },
   {
     "src": "img/logo-icon-500.png",
-    "sizes": "500x900",
+    "sizes": "500x500",
     "type": "image/png"
   }]
 }
