@@ -1,3 +1,13 @@
+
+function promotePWAInstallation(){
+  // Hide the app provided install promotion
+  $(".pwa-banner").addClass("hidden")
+  // Show the install prompt
+  deferredPrompt.prompt();
+  // We've used the prompt, and can't use it again, throw it away
+  deferredPrompt = null;
+}
+
 $(function(){
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {

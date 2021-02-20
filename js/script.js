@@ -1,13 +1,3 @@
-
-function promotePWAInstallation(){
-   // Hide the app provided install promotion
-   hideInstallPromotion();
-   // Show the install prompt
-   deferredPrompt.prompt();
-   // We've used the prompt, and can't use it again, throw it away
-   deferredPrompt = null;
-}
-
 $(function(){
     $(window).on("scroll",function(){
     var top = $(this).scrollTop();
