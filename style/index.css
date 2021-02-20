@@ -132,6 +132,10 @@ a.toggle_hint {
   background-color: #fff;
 }
 
+.inAppInstallBanner img {
+  width: 35px;
+}
+
 .pwa-banner,
 .ios-pwa-modal {
   animation-duration: 0.3s;
