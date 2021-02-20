@@ -1,20 +1,7 @@
 
 
 $(function(){
-
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('js/serviceWorker.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-      });
-    });
-  }
-
-  $(window).on("scroll",function(){
+    $(window).on("scroll",function(){
     var top = $(this).scrollTop();
     $(".jumbotron").css("background-position-y",(top/-5));
     // $(".principles").css("background-position-y",(top/-5));

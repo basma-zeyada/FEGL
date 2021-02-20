@@ -18,7 +18,7 @@ input[type='checkbox'] + label:before {
   color: #10074f;
 }
 /* unchecked */
-input[type='checkbox'] + label:before { 
+input[type='checkbox'] + label:before {
   content: '\f096';
   font-weight:100;
 }
@@ -39,6 +39,17 @@ input[type='checkbox']:checked + label {
 .jumbotron{
   background: url(../img/intro.png) 0 0 fixed no-repeat;
   background-size: cover;
+}
+
+.start {
+  position: absolute;
+  bottom: 35px;
+  left: 47%;
+}
+
+.start img{
+  width: 120px;
+  hyphens: 100px;
 }
 
 .download-file{
@@ -114,4 +125,51 @@ a.toggle_hint {
 
 .form_print .hint, .form_print .toggle_hint, .form_print button[type="submit"]{
   visibility: hidden;
+}
+
+/* PWA start */
+.inAppInstallBanner {
+  background-color: #fff;
+}
+
+.pwa-banner,
+.ios-pwa-modal {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+}
+
+.pwa-banner.hidden, .ios-pwa-modal.hidden {
+  animation-name: fadeOut;
+  opacity: 0;
+  bottom: -60px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    bottom: -60px;
+    transform: translateY(startYposition);
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+    transform: translateY(endYposition);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    bottom: 0;
+    transform: translateY(startYposition);
+  }
+
+  100% {
+    opacity: 0;
+    bottom: -60px;
+    transform: translateY(endYposition);
+  }
 }
