@@ -1,0 +1,22 @@
+{
+  "name": "Front-End Guidelines",
+  "short_name": "FE Guidelines",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "A readable Hacker News app.",
+  "icons": [{
+    "src": "img/logo-iocn-48.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  },
+  {
+    "src": "img/splash-500-900.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+  }]
+}

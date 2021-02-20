@@ -1,6 +1,19 @@
 
 
 $(function(){
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+
   $(window).on("scroll",function(){
     var top = $(this).scrollTop();
     $(".jumbotron").css("background-position-y",(top/-5));
@@ -36,7 +49,7 @@ function getDate(){
 }
 function getFormData(){
   $("#form_data").addClass("form_print")
-  
+
     var dev_name = document.getElementById('dev_name').value;
     var element = document.getElementById('form_data');
     var opt = {
@@ -44,7 +57,7 @@ function getFormData(){
       filename:     dev_name,
     };
     html2pdf(element, opt);
-  
+
   setTimeout(function(){
     $("#form_data").removeClass("form_print")
   },1000)

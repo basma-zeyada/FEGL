@@ -3,25 +3,23 @@
   <head>
     <meta charset="UTF-8">
     <title>Front-End Guidelines</title>
-    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 
     <meta property="og:title" content="Front-End Guidelines" />
     <meta property="og:description" content="Front-End Coding Standards (HTML & CSS)" />
     <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
     <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 
-    
     <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/index.css">
-
-    
   </head>
 
   <body>
 
     <nav class="navbar fixed-top text-light bg-blue py-3 anim_nav">
-      <h4 class="w-100 text-center">Front-End Coding Standards (HTML &amp; CSS)</h4>
+      <h4 class="w-100 text-center">Front-End Coding Guidelines (HTML &amp; CSS)</h4>
     </nav>
     <div class="jumbotron h-100 text-light mb-0">
       <div class="container-fluid d-flex h-100">
@@ -81,7 +79,7 @@
             </div>
           </div>
             <div class="card mb-3">
-          
+
                 <div class="card-header font-weight-bold p-2 text-dark">
                   HTML
                   </div>
@@ -89,7 +87,7 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" data_name="File Naming and Organization" value="" id="html1">
                     <label class="form-check-label" for="html1">
-                        File Naming and Organization 
+                        File Naming and Organization
                     </label>
                     <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
                     <div class="bg-white rounded text-secondary hint">
@@ -100,7 +98,7 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" data_name="Semantics" id="html2">
                     <label class="form-check-label" for="html2">
-                        Semantics 
+                        Semantics
                     </label>
                     <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
                     <div class="bg-white rounded text-secondary hint">
@@ -111,7 +109,7 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" data_name="Formatting" id="html3">
                     <label class="form-check-label" for="html3">
-                        Formatting 
+                        Formatting
                     </label>
                     <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
                     <div class="bg-white rounded text-secondary hint">
@@ -124,7 +122,7 @@
                               &ltbr&gt
                               &ltinput&gt
                               &ltimg&gt
-                            </code>  
+                            </code>
                           </li>
                           <li>Element and attribute names should all be lowercase.</li>
                           <li>Classes are preferred over IDs when it comes to CSS references to avoid specificity issues.</li>
@@ -183,7 +181,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" data_name="Boolean Attributes" id="html8">
                     <label class="form-check-label" for="html8">
@@ -191,7 +189,7 @@
                     </label>
                     <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
                     <div class="bg-white rounded text-secondary hint">
-                      <div>XHTML required you to declare a value for all attributes, but HTML5 has no such requirement for boolean attributes. 
+                      <div>XHTML required you to declare a value for all attributes, but HTML5 has no such requirement for boolean attributes.
                         <code>"autofocus, selected, checked, disabled, readonly, multiple, required, novalidate"</code>
                         <br> The <a href="https://html.spec.whatwg.org/multipage/infrastructure.html#sec-boolean-attributes">W3C Spec for Boolean Attributes</a> has additional information on these boolean attributes.
                       </div>
@@ -240,7 +238,7 @@
                           <li>Use <code>H1 - H6 </code>to properly order and identify headings.</li>
                           <li>In tables, use the <code>scope</code> attribute to associate header cells and data cells in data tables and use the <code>summary</code> attribute of the table element to give an overview of data tables.</li>
                           <li>For forms, always provide a submit button, use <code>label</code> elements to associate text labels with form controls, and visually indicate required form controls.</li>
-                          <li>With image elements, always use <code>alt</code> attributes. it attribute text should describe the content of the image as specifically as possible. 
+                          <li>With image elements, always use <code>alt</code> attributes. it attribute text should describe the content of the image as specifically as possible.
                             <ul>
                               <li>If an image is used for decorative purposes only, an <code>alt="" </code>should be used.</li>
                             </ul>
@@ -285,16 +283,16 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" data_name="File Naming and Organization" value="" id="css1">
                     <label class="form-check-label" for="css1">
-                        File Naming and Organization 
+                        File Naming and Organization
                     </label>
                     <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
                     <div class="bg-white rounded text-secondary hint">
-                      <div>Filenames should contain lowercase letters and words should be separated with a hyphen. 
+                      <div>Filenames should contain lowercase letters and words should be separated with a hyphen.
                         <ul>
                           <li>Within individual CSS/SCSS files, organize sections of code by component element.</li>
                           <li>Maintain a consistent commenting hierarchy for each section of code.</li>
                           <li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
-                          <li>The top-level SCSS should serve as a “Table of Contents” 
+                          <li>The top-level SCSS should serve as a “Table of Contents”
                             <ul>
                               <li>Global
                                   <li>Vendor</li>
@@ -310,11 +308,11 @@
                     </div>
                   </div>
 
-                  
+
                   <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="css2">
                       <label class="form-check-label" for="css2">
-                          Rule Structure 
+                          Rule Structure
                       </label>
                       <a class="toggle_hint">hint <i class="fa fa-chevron-down"></i></a>
                       <div class="bg-white rounded text-secondary hint">
@@ -418,9 +416,9 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </form>
-          
+
       </div>
-        
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
