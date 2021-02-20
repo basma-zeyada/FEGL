@@ -6,17 +6,18 @@
   "background_color": "#000",
   "description": "A readable Hacker News app.",
   "icons": [{
-    "src": "img/logo-iocn-48.png",
+    "src": "img/logo-icon-48.png",
     "sizes": "48x48",
     "type": "image/png"
   },
   {
-    "src": "img/splash-500-900.png",
-    "sizes": "48x48",
+    "src": "img/logo-icon-144.png",
+    "sizes": "144x144",
     "type": "image/png"
-  }],
-  "related_applications": [{
-    "platform": "play",
-    "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+  },
+  {
+    "src": "img/splash-500-900.png",
+    "sizes": "500x900",
+    "type": "image/png"
   }]
 }
