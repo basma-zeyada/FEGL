@@ -1,4 +1,7 @@
 
+// Initialize deferredPrompt for use later to show browser install prompt.
+var deferredPrompt;
+
 function promotePWAInstallation(){
   // Hide the app provided install promotion
   $(".pwa-banner").addClass("hidden")
@@ -21,8 +24,6 @@ $(function(){
     });
   }
 
-  // Initialize deferredPrompt for use later to show browser install prompt.
-  var deferredPrompt;
   window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent the default infobar from appearing on mobile
   e.preventDefault();
