@@ -2,15 +2,24 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Front-End Guidelines</title>
+    <title>UI Guidelines</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1">
 
-    <meta property="og:title" content="Front-End Guidelines" />
-    <meta property="og:description" content="Front-End Coding Standards (HTML & CSS)" />
+    <!-- Open Graph Protocol (OGP) -->
+    <meta property="og:title" content="UI Guidelines" />
+    <meta property="og:description" content="UI Coding Standards (HTML & CSS)" />
     <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" />
     <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" />
+
+    <!-- Manifest -->
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+
+    <!-- IPhone specific tags for PWA -->
+    <link rel="apple-touch-icon" sizes="44x44" href="img/logo-icon-44.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/logo-icon-144.png">
+    <link rel="apple-touch-startup-image" sizes="900x900" href="img/logo-icon-900.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,35 +28,34 @@
 
   <body>
 
-    <nav class="navbar fixed-top text-light bg-blue py-3 anim_nav">
-      <h4 class="w-100 text-center">Front-End Coding Guidelines (HTML &amp; CSS)</h4>
+    <nav class="navbar fixed-top text-dark bg-white py-3 anim_nav">
+      <h4 class="w-100 text-center">UI Coding Guidelines (HTML &amp; CSS)</h4>
     </nav>
-    <div class="jumbotron h-100 text-light mb-0">
+    <div class="jumbotron h-100 text-light mb-0 pt-0">
       <div class="container-fluid d-flex h-100">
         <div class="row align-self-center">
-          <div class="ml-5 col-7 col-md-5">
-              <h1 class="display-4">Front-End Coding Standards <small>(HTML & CSS)</small></h1>
-              <p class="lead">This is a living document of Best Practices and Code Standards for Front-End Development. The UI Development Team is encouraged to test, discuss, and evolve what is documented here together as best practices change and new ideas are shared.</p>
-              <hr class="my-4">
+          <div class="ml-sm-5 col-md-5">
+              <h1>UI Coding Standards <small>(HTML & CSS)</small></h1>
+              <p class="lead mb-2">This is a living document of Best Practices and Code Standards for UI Development. The UI Development Team is encouraged to test, discuss, and evolve what is documented here together as best practices change and new ideas are shared.</p>
               <p>Please implement and enforce these agreed upon standards in your own builds and in code reviews at all times for all projects.</p>
             </div>
         </div>
-        <a class="btn start" href="#" role="button">
-          <img width="80" height="100" src="img/scroll.gif" />
-        </a>
+        <section class="start">
+          <a href="#thanks"><span></span></a>
+        </section>
       </div>
     </div>
 
     <section class="row no-gutters download-file p-5">
       <div class="col  py-5 text-center">
-        <h5 class="font-weight-normal mt-3 text-dark">Check the full documentation of Front-End Coding Standards in the following link</h5>
+        <h5 class="font-weight-normal mt-3 text-dark">Check the full documentation of UI Coding Standards in the following link</h5>
         <a href="https://github.com/badran1/eSpace-Front-End-Guidlines" target="_blank" class="btn btn-primary mt-3">Full documentation <i class="fa fa-external-link"></i></a>
       </div>
     </section>
 
-    <section class="row no-gutters principles text-dark p-5">
+    <section class="row no-gutters principles text-dark py-5">
       <div class="container">
-        <h1 class="text-center text-light font-weight-light my-5">The Front-End Checklist</h1>
+        <h1 class="text-center text-light font-weight-light my-md-5">UI Checklist</h1>
         <br>
         <form id="form_data" class="needs-validation" onsubmit="getFormData()">
           <div class="card mb-4">
@@ -424,7 +432,7 @@
     <div id="inAppInstallBanner" class="pwa-banner fixed-bottom hidden">
       <div class="inAppInstallBanner d-flex justify-content-between border-top px-1">
         <div class="d-flex align-items-center">
-          <img src="img/logo-icon-44.png" class="m-1" alt="Front-End Guidelines">
+          <img src="img/logo-icon-44.png" class="m-1" alt="UI Guidelines">
           <div>
             <button type="button" class="px-1 btn btn-link text-decoration-none" onclick="promotePWAInstallation()">
               <span class="px-1">Install to your homescreen</span>

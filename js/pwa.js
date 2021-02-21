@@ -32,4 +32,11 @@ $(function(){
   // Update UI and show the customized install App promotion
   $(".pwa-banner").removeClass("hidden")
   });
+
+  window.addEventListener('appinstalled', () => {
+    // Clear the deferredPrompt so it can be garbage collected
+    deferredPrompt = null;
+    // Optionally, send analytics event to indicate successful install
+    console.log('PWA was installed');
+   });
 })
