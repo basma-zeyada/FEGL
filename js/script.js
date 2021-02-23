@@ -38,8 +38,8 @@ function getFormData(){
     var dev_name = document.getElementById('dev_name').value;
     var element = document.getElementById('form_data');
     var opt = {
-      margin:       10,
-      filename:     dev_name,
+      margin: 10,
+      filename: dev_name,
     };
     html2pdf(element, opt);
 
