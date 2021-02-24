@@ -8,6 +8,9 @@ body{
   background-color: #160f4e;
 }
 
+.display-none{
+  display: none !important;
+}
 /*** checkbox icon start ***/
 
 input[type='checkbox'] {display:none;}
@@ -40,10 +43,6 @@ input[type='checkbox']:checked + label {
   background: url(../img/intro.png) 0 0 fixed no-repeat;
   background-size: cover;
   border-radius: 0;
-}
-
-.start {
-  background: url(https://picsum.photos/1200/800?image=516) center center / cover no-repeat;
 }
 
 .start:hover {
@@ -195,15 +194,14 @@ a.toggle_hint {
   width: 35px;
 }
 
-.pwa-banner,
-.ios-pwa-modal {
+.pwa-banner{
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
   animation-name: fadeIn;
 }
 
-.pwa-banner.hidden, .ios-pwa-modal.hidden {
+.pwa-banner.hidden {
   animation-name: fadeOut;
   opacity: 0;
   bottom: -60px;
@@ -293,4 +291,14 @@ span {
     margin: 0 10%;
     width: 80%;
   }
+}
+
+/* Offline page  */
+
+.offline{
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
