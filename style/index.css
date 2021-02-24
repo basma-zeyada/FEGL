@@ -238,6 +238,7 @@ a.toggle_hint {
 /*** PWA popup for IOS ***/
 .ios-pwa-modal {
   position: fixed;
+  padding: 5px;
   bottom: 5%;
   width: 300px;
   text-align: center;
