@@ -195,6 +195,7 @@ a.toggle_hint {
 }
 
 .pwa-banner{
+  display: none;
   animation-duration: 0.3s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
