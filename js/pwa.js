@@ -5,7 +5,7 @@ var ua = navigator.userAgent.toLowerCase();
 
 function promotePWAInstallation(){
   // Hide the app provided install promotion
-  $("#inAppInstallBannerg").hide().addClass("hidden")
+  $("#inAppInstallBannerg").hide().addClass("pwa-hidden")
   // Show the install prompt
   deferredPrompt.prompt();
   // We've used the prompt, and can't use it again, throw it away
@@ -44,7 +44,7 @@ $(function(){
   }
 
   if(isSafari() && isIos()){
-    $("#ios-pwa-modal").show().removeClass("hidden")
+    $("#ios-pwa-modal").show().removeClass("pwa-hidden")
   }
 
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -53,7 +53,7 @@ $(function(){
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
   // Update UI and show the customized install App promotion
-    $("#inAppInstallBanner").show().removeClass("hidden")
+    $("#inAppInstallBanner").show().removeClass("pwa-hidden")
   });
 
   window.addEventListener('appinstalled', () => {
