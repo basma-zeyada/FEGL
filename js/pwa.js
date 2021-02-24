@@ -16,6 +16,20 @@ function updateOnlineStatus(){
   $(".offline").toggleClass("display-none")
 }
 
+// show pwa popup only on safari - ios
+function isSafari(){
+  return (
+    ua.indexOf("iphone") !== -1 &&
+    ua.indexOf("safari") !== -1 &&
+    ua.indexOf("crios") === -1 &&
+    ua.indexOf("fxios") === -1
+  )
+  }
+
+function isIos () {
+  return /iphone|ipad|ipod/.test(ua);
+};
+
 $(function(){
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
@@ -29,19 +43,7 @@ $(function(){
     });
   }
 
-  // show pwa popup only on safari - ios
-  var isSafari = (
-    ua.indexOf("iphone") !== -1 &&
-    ua.indexOf("safari") !== -1 &&
-    ua.indexOf("crios") === -1 &&
-    ua.indexOf("fxios") === -1
-  );
-
-  function isIos () {
-    return /iphone|ipad|ipod/.test(ua);
-  };
-
-  if(isSafari && isIos){
+  if(isSafari() && isIos()){
     $("#ios-pwa-modal").show().removeClass("hidden")
   }
 
